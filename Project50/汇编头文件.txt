@@ -1,0 +1,41 @@
+SSEG SEGMENT
+	DB  2000 DUP(0)
+SSEG ENDS
+DSEG           SEGMENT
+RUL            DB             2000 DUP (0)
+DSEG           ENDS
+CSEG           SEGMENT
+ASSUME         CS:CSEG,DS:DSEG,SS:SSEG
+
+
+
+int gcd(int a,int b){
+	//c=a+b;			//这里应该是语义错误，c未定义标识符
+	int c;
+	c=a%b;
+	if(b==0)return a;
+	else return  gcd(b,c);
+}
+int main(){
+	int e;
+	if(e==1){
+		e=e+1;
+	}
+	int f;
+	e=28;
+	f=24;
+	/*
+		测试函数
+	*/
+	while(e==f)
+	{
+		e=e+f;
+		break;
+	}
+	//gcd(e,f);
+	int k;
+	int r;
+	k=28;
+	r=24;
+	int h;
+}

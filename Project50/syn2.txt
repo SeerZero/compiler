@@ -1,0 +1,71 @@
+ 1 S0 -> translation_unit
+ 2 translation_unit -> external_declaration
+ 3 external_declaration -> function_definition
+ 4 external_declaration -> declaration
+
+ 5 declaration -> type_specifier id ;			符号表变量
+
+ 6 type_specifier -> void
+ 7 type_specifier -> int
+ 8 type_specifier -> double
+ 
+ 9function_definition->type_specifier function_name parameter compound_statement  符号表函数
+
+ 10 function_name -> id
+ 11 parameter ->  ( )
+ 12 compound_statement -> { decalration_list }
+ 13 compound_statement -> { statement_list }
+ 14 compound_statement -> { decalration_list statement_list }
+ 15 decalration_list -> declaration
+ 16 decalration_list -> decalration_list declaration
+ 17 statement_list -> statement
+ 18 statement_list -> statement_list statement
+ 19 statement -> compound_statement
+ 20 statement -> expression_statement
+ 21 statement -> selection_statement  M
+ 22 statement -> iteration_statement M
+ 23 statement -> jump_statement
+ 24 expression_statement -> ;
+ 25 expression_statement -> expression ;
+ 26 expression -> assignment_expression
+
+ 27 assignment_expression -> primary_expression = assignment_expression 赋值四元式
+ 
+ 28 assignment_expression -> logical_or_expression
+
+ 29 logical_or_expression -> logical_or_expression || M logical_and_expression  或四元式
+ 
+ 30 logical_or_expression -> logical_and_expression
+ 31 logical_and_expression -> logical_and_expression && M equality_expression	AND四元式
+
+ 32 logical_and_expression -> equality_expression
+ 
+ 33 equality_expression -> equality_expression == relational_expression		相等四元式
+
+ 34 equality_expression -> relational_expression
+ 35 relational_expression -> relational_expression < additive_expression	小于四元式
+ 36 relational_expression -> relational_expression > additive_expression	大于四元式
+ 37 relational_expression -> relational_expression <= additive_expression	小于等于四元式
+ 38 relational_expression -> relational_expression >= additive_expression	大于等于四元式
+ 39 relational_expression -> additive_expression
+ 40 additive_expression -> additive_expression - multiplicative_expression	减法四元式
+ 41 additive_expression -> additive_expression + multiplicative_expression	加法四元式
+ 42 additive_expression -> multiplicative_expression
+ 43 multiplicative_expression -> multiplicative_expression * primary_expression	乘法四元式
+ 44 multiplicative_expression -> multiplicative_expression / primary_expression	除法四元式
+ 45 multiplicative_expression -> multiplicative_expression % primary_expression 取模四元式
+ 46 multiplicative_expression -> primary_expression
+ 47 primary_expression -> id
+ 48 primary_expression -> double_num
+ 49 primary_expression -> int_num
+ 50 primary_expression -> ( expression )
+
+ 51 selection_statement -> if ( expression ) M statement				条件四元式
+ 52 iteration_statement -> while ( M expression ) M statement			循环四元式
+ 
+ 53 jump_statement -> continue ;
+ 54 jump_statement -> break ;
+ 55 jump_statement -> return ;
+ 56 jump_statement -> return expression ;
+
+ 文法里面没有else

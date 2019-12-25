@@ -1,0 +1,32 @@
+ 1 S0 -> translation_unit
+ 2 translation_unit -> external_declaration
+ 3 external_declaration -> function_definition | function_definition external_declaration
+ 4 declaration -> type_specifier id ;
+ 5 type_specifier -> void | int | double | string | char
+ 6 function_definition -> type_specifier function_name parameter compound_statement
+ 7 function_name -> id
+ 8 parameter -> ( ) | ( function_declaration_list )
+ 9 compound_statement -> { statement_list }
+ 10 decalration_list -> declaration | decalration_list declaration
+ 11 statement_list -> statement | statement_list statement
+ 12 statement -> compound_statement | expression_statement | selection_statement | iteration_statement | jump_statement | decalration_list
+ 13 expression_statement -> ; | expression ;
+ 14 expression -> assignment_expression
+ 15 assignment_expression -> primary_expression = assignment_expression | logical_or_expression
+ 16 logical_or_expression -> logical_or_expression || logical_and_expression | logical_and_expression
+ 17 logical_and_expression -> logical_and_expression && equality_expression | equality_expression
+ 18 equality_expression -> equality_expression == relational_expression | relational_expression
+ 19 relational_expression -> relational_expression < additive_expression | relational_expression > additive_expression | relational_expression <= additive_expression | relational_expression >= additive_expression | additive_expression
+ 20 additive_expression -> additive_expression - multiplicative_expression | additive_expression + multiplicative_expression | multiplicative_expression
+ 21 multiplicative_expression -> multiplicative_expression * last_expression | multiplicative_expression / last_expression | multiplicative_expression % last_expression | last_expression
+ 22 primary_expression -> id | double_num | int_num | ( expression )
+ 23 selection_statement -> if ( expression ) statement | if ( expression ) statement selection_continue_statement
+ 24 iteration_statement -> while ( expression ) statement
+ 25 jump_statement -> continue ; | break ; | return ; | return expression ;
+ 26 function_declaration_list -> function_declaration | function_declaration_list , function_declaration
+ 27 function_declaration -> type_specifier id
+ 28 selection_continue_statement -> else end_selection_statement | else selection_statement
+ 29 end_selection_statement -> compound_statement | expression_statement | iteration_statement | jump_statement
+ 30 s_declaration_list -> s_declaration | s_declaration_list , s_declaration
+ 31 s_declaration -> id
+ 32 last_expression -> function_name ( s_declaration_list ) | id | double_num | int_num | ( expression ) | function_name ( )

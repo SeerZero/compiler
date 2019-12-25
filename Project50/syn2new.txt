@@ -1,0 +1,77 @@
+ 1 S0 -> translation_unit
+ 2 translation_unit -> external_declaration
+ 3 external_declaration -> function_definition
+ 4 external_declaration -> function_definition external_declaration
+ 5 declaration -> type_specifier id ;
+ 6 type_specifier -> void
+ 7 type_specifier -> int
+ 8 type_specifier -> double
+ 9 type_specifier -> string
+ 10 type_specifier -> char
+ 11 function_definition -> type_specifier function_name parameter compound_statement
+ 12 function_name -> id
+ 13 parameter -> ( )
+ 14 parameter -> ( function_declaration_list )
+ 15 compound_statement -> { statement_list }
+ 16 decalration_list -> declaration
+ 17 decalration_list -> decalration_list declaration
+ 18 statement_list -> statement
+ 19 statement_list -> statement_list statement
+ 20 statement -> compound_statement
+ 21 statement -> expression_statement
+ 22 statement -> selection_statement
+ 23 statement -> iteration_statement
+ 24 statement -> jump_statement
+ 25 statement -> decalration_list
+ 26 expression_statement -> ;
+ 27 expression_statement -> expression ;
+ 28 expression -> assignment_expression
+ 29 assignment_expression -> primary_expression = assignment_expression
+ 30 assignment_expression -> logical_or_expression
+ 31 logical_or_expression -> logical_or_expression || logical_and_expression
+ 32 logical_or_expression -> logical_and_expression
+ 33 logical_and_expression -> logical_and_expression && equality_expression
+ 34 logical_and_expression -> equality_expression
+ 35 equality_expression -> equality_expression == relational_expression
+ 36 equality_expression -> relational_expression
+ 37 relational_expression -> relational_expression < additive_expression
+ 38 relational_expression -> relational_expression > additive_expression
+ 39 relational_expression -> relational_expression <= additive_expression
+ 40 relational_expression -> relational_expression >= additive_expression
+ 41 relational_expression -> additive_expression
+ 42 additive_expression -> additive_expression - multiplicative_expression
+ 43 additive_expression -> additive_expression + multiplicative_expression
+ 44 additive_expression -> multiplicative_expression
+ 45 multiplicative_expression -> multiplicative_expression * last_expression
+ 46 multiplicative_expression -> multiplicative_expression / last_expression
+ 47 multiplicative_expression -> multiplicative_expression % last_expression
+ 48 multiplicative_expression -> last_expression
+ 49 primary_expression -> id
+ 50 primary_expression -> double_num
+ 51 primary_expression -> int_num
+ 52 primary_expression -> ( expression )
+ 53 selection_statement -> if ( expression ) statement
+ 54 selection_statement -> if ( expression ) statement selection_continue_statement
+ 55 iteration_statement -> while ( expression ) statement
+ 56 jump_statement -> continue ;
+ 57 jump_statement -> break ;
+ 58 jump_statement -> return ;
+ 59 jump_statement -> return expression ;
+ 60 function_declaration_list -> function_declaration
+ 61 function_declaration_list -> function_declaration_list , function_declaration
+ 62 function_declaration -> type_specifier id
+ 63 selection_continue_statement -> else end_selection_statement
+ 64 selection_continue_statement -> else selection_statement
+ 65 end_selection_statement -> compound_statement
+ 66 end_selection_statement -> expression_statement
+ 67 end_selection_statement -> iteration_statement
+ 68 end_selection_statement -> jump_statement
+ 69 s_declaration_list -> s_declaration
+ 70 s_declaration_list -> s_declaration_list , s_declaration
+ 71 s_declaration -> id
+ 72 last_expression -> function_name ( s_declaration_list )
+ 73 last_expression -> id
+ 74 last_expression -> double_num
+ 75 last_expression -> int_num
+ 76 last_expression -> ( expression )
+ 77 last_expression -> function_name ( )

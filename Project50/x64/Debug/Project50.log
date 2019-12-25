@@ -1,0 +1,14 @@
+﻿  Scan.cpp
+c:\users\administrator\desktop\project50\scan.cpp(197): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\administrator\desktop\project50\scan.cpp(211): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\administrator\desktop\project50\scan.cpp(245): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\administrator\desktop\project50\scan.cpp(290): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\administrator\desktop\project50\scan.cpp(297): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\administrator\desktop\project50\scan.cpp(310): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\administrator\desktop\project50\scan.cpp(355): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\administrator\desktop\project50\scan.cpp(380): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\administrator\desktop\project50\scan.cpp(392): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\administrator\desktop\project50\scan.cpp(430): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\administrator\desktop\project50\scan.cpp(442): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\administrator\desktop\project50\scan.cpp(474): warning C4129: “#”: 不可识别的字符转义序列
+  Project50.vcxproj -> C:\Users\Administrator\Desktop\x64\Debug\Project50.exe
